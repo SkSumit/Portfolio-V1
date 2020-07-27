@@ -1,4 +1,5 @@
 {
+  "homepage": "http://SkSumit.github.io/Portfolio-V1",
   "name": "Portfolio",
   "version": "1.0.0",
   "main": "app.js",
@@ -32,6 +33,11 @@
   "scripts": {
     "serve": "live-server public/",
     "build": "webpack ",
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
