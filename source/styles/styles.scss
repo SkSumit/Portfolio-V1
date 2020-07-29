@@ -1,50 +1,126 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@100;300;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@100;300;600;800&display=swap");
 @import "../../node_modules/bulma/sass/utilities/initial-variables";
 
-$open-sans: 'Open Sans';   
-$raleway: 'Raleway';
+$open-sans: "Open Sans";
+$raleway: "Raleway";
 $body-family: $raleway;
 
-$black:#121212;
-$off-black:#1C1D1F;
-$white:#fff;
-$gray:#1c1d1f;
-$purple:#5E6AD2;
+$black: #121212;
+$off-black: #1c1d1f;
+$white: #fff;
+$gray: #1c1d1f;
+$purple: #5e6ad2;
 
+$body-background-color: $black;
+$body-color: $white;
 
-$body-background-color:$black; 
-$body-color:$white;
-
-$title-color:$white;
-$size-1: 5rem;$size-3:4rem;
-.section .subtitle.is-5,.title.is-size-5-desktop,.subtitle.is-size-3-desktop{
+$title-color: $white;
+.body{
+    scroll-behavior: smooth;
+}
+.is-white {
+  color: $white !important;
+}
+.hero.pattern-dots-sm {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%235e6ad2' fill-opacity='0.19' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  .title.is-size-5-desktop,
+  .subtitle.is-size-3-desktop {
     color: $purple !important;
-    
-}
-h6{
-    color:#95a2b3 !important;
+  }
+  @media (min-width: $desktop) {
+    h1 {
+      font-size: 5rem !important;
+    }
+    h3 {
+      font-size: 4rem !important;
+    }
+  }
+
+  .subtitle.is-5 {
+    color: #95a2b3 !important;
+  }
 }
 
-.hero{
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%235e6ad2' fill-opacity='0.19' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+.section-gray {
+  background-color: $gray;
+}
+.bg-white {
+  background-color: $white;
 }
 
-.section-gray{
-    background-color: $gray;
-}
-.bg-white{
-    background-color: $white;
-}
-
-.iconify{
-       width: 5rem;
-       height: 10rem;
-       margin: 1rem;
-       color: $white !important;
+.iconify {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem;
+  color: $white !important;
 }
 
+$box-background-color: linear-gradient(
+  180deg,
+  #28292c 0%,
+  rgba(39, 40, 43, 0.82) 100%
+);
+$box-shadow: 0px 13px 40px rgba(0, 0, 0, 0.3), 0px 4px 4px rgba(0, 0, 0, 0.2);
+$box-radius: 16px;
+.project {
+  background-image: linear-gradient(
+    rgb(40, 41, 44) 0%,
+    rgba(39, 40, 43, 0.82) 100%
+  );
+  .title {
+    font-size: 2rem;
+    // color: $purple !important;
+  }
+  .subtitle,
+  a {
+    color: $white !important;
+  }
+}
+
+.aboutMeHero {
+  .subtitle {
+    color: $white;
+  }
+  a {
+   
+    color: $white;
+    font-weight: 800;
+  }
+}
+
+$footer-background-color: $black;
+footer {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%235e6ad2' fill-opacity='0.19' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  .subtitle.is-5 {
+    color: $purple !important;
+  }
+  a,
+  .title,
+  .subtitle {
+    color: $white !important;
+  }
+  a:hover{
+    color: $grey-darker !important;
+  }
+}
+
+$footer-padding:3rem 1.5rem 1rem;
+
+.stp{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    button{
+
+        background-color: $purple;
+        border: $purple;
+        color: $white;
+    }
+    button:hover{
+        color: $grey-darker ;
+    }
+}
 // 4. Import the rest of Bulma
 
 @import "../../node_modules/bulma/bulma.sass";
-

@@ -1,34 +1,51 @@
 import React from "react";
 
-
 const Card = (props) => {
   return (
-    <div class="card">
-    <header class="card-header">
-    <p class="card-header-title">
-        Component
-    </p>
-    <a href="#" class="card-header-icon" aria-label="more options">
-        <span class="icon">
-        <i class="fas fa-angle-down" aria-hidden="true"></i>
-        </span>
-    </a>
-    </header>
-    <div class="card-content">
-    <div class="content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-        <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
-        <br/>
-        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+    <div class="columns animate__animated animate__fadeIn animate__slower project  my-6  is-vcentered">
+      <div class="column has-text-centered ">
+        <p class="title mt-2">{props.title}</p>
+        <p class="subtitle">
+          {props.subtitle}
+          <a target="_blank" href={props.gitUrl}>
+            <i class="fab fa-github mx-2"></i>
+          </a>
+          <a target="_blank" href={props.linkUrl}>
+            <i class="fas fa-external-link-alt  mx-2"></i>
+          </a>
+        </p>
+      </div>
+      <div class="column ">
+        <figure className="image">
+          <img src={props.imgUrl} />
+        </figure>
+      </div>
     </div>
-    </div>
-    <footer class="card-footer">
-    <a href="#" class="card-footer-item">Save</a>
-    <a href="#" class="card-footer-item">Edit</a>
-    <a href="#" class="card-footer-item">Delete</a>
-    </footer>
-</div>
   );
 };
 
-export default Card;
+const CardInverse = (props) => {
+  return (
+    <div class="columns project is-vcentered">
+      <div class="column">
+        <figure className="image">
+          <img src={props.imgUrl} />
+        </figure>
+      </div>
+      <div class="column  has-text-centered ">
+        <p class="title mt-2 ">{props.title}</p>
+        <p class="subtitle">
+          {props.subtitle}
+          <a target="_blank" href={props.gitUrl}>
+            <i class="fab fa-github mx-2"></i>
+          </a>
+          <a target="_blank" href={props.linkUrl}>
+            <i class="fas fa-external-link-alt  mx-2"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export { Card, CardInverse };
